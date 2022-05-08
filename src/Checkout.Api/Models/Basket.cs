@@ -11,6 +11,11 @@
         public int ClientIdentity { get; set; }
 
         /// <summary>
+        /// The basket identity in the system
+        /// </summary>
+        public int Id { get; set; }
+
+        /// <summary>
         /// The items in the basket
         /// </summary>
         public IDictionary<string, int> Items { get; set; } = new Dictionary<string, int>();

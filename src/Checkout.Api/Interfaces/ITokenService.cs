@@ -11,7 +11,7 @@ namespace Checkout.Api.Interfaces
         /// <param name="actor">The Actor details to validate in the system</param>
         /// <param name="cancellationToken">System cancellation object</param>
         /// <returns>A token object containing the JWT and when it expires</returns>
-        Task<object> GetclaimsIdentityAsync(Actor actor, CancellationToken cancellationToken);
+        Task<object> GetClaimsIdentityAsync(Actor actor, CancellationToken cancellationToken);
 
         /// <summary>
         /// Generates a new token for an existing valid actor

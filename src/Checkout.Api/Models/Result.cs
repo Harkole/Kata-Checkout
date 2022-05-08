@@ -15,7 +15,7 @@
         /// <summary>
         /// The object value if present
         /// </summary>
-        public T? Value { get; set; }
+        public T Value { get; set; } = default!;
 
         /// <summary>
         /// Addition message, expected to be an friendly/safe error message

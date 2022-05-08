@@ -28,9 +28,8 @@ namespace Checkout.Api.Interfaces
         /// Removes the stored basket value
         /// </summary>
         /// <param name="clientId">The client identity</param>
-        /// <param name="basketId">The basket identity to delete</param>
         /// <param name="cancellationToken"></param>
         /// <returns>A success/failure flag for deleting the basket</returns>
-        Task<Result<Basket>> DeleteBasketAsync(int clientId, int basketId, CancellationToken cancellationToken);
+        Task<Result<Basket>> DeleteBasketAsync(int clientId, CancellationToken cancellationToken);
     }
 }

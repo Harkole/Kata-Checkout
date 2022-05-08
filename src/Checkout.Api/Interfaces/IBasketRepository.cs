@@ -20,10 +20,9 @@ namespace Checkout.Api.Interfaces
         /// The basket to 
         /// </summary>
         /// <param name="clientId">The client identity</param>
-        /// <param name="basketId">The basket identity</param>
         /// <param name="cancellationToken">System cancellation object</param>
         /// <returns>The client basket that was stored</returns>
-        Task<Result<Basket>> GetBasketAsync(int clientId, int basketId, CancellationToken cancellationToken);
+        Task<Result<Basket>> GetBasketAsync(int clientId, CancellationToken cancellationToken);
 
         /// <summary>
         /// Removes the stored basket value

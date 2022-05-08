@@ -21,7 +21,8 @@ namespace Checkout.Api.Interfaces
         /// </summary>
         /// <param name="clientId">The client basket to permenantly delete</param>
         /// <param name="cancellationToken">System cancellation object</param>
-        Task DeleteClientBasketAsync(int clientId, CancellationToken cancellationToken);
+        /// <returns>A success or failure value</returns>
+        Task<Result<Basket>> DeleteClientBasketAsync(int clientId, CancellationToken cancellationToken);
 
         /// <summary>
         /// Provides access to a stored client basket

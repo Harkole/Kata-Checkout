@@ -35,9 +35,10 @@ namespace Checkout.Api.Interfaces
         /// <summary>
         /// Removes an item from the basket and recalculates the cost
         /// </summary>
+        /// <param name="clientId">The client identity the basket belongs too</param>
         /// <param name="basket">The basket details to remove</param>
         /// <param name="cancellationToken">System cancellation object</param>
         /// <returns>The updated basket</returns>
-        Task<Result<Basket>> RemoveItemFromBasketAndCalculateCostAsync(Basket basket, CancellationToken cancellationToken);
+        Task<Result<Basket>> RemoveItemFromBasketAndCalculateCostAsync(int clientId, Basket basket, CancellationToken cancellationToken);
     }
 }

@@ -14,7 +14,7 @@ namespace Checkout.Api.Interfaces
         /// <param name="basket">The basket items to add</param>
         /// <param name="cancellationToken">System cancellation object</param>
         /// <returns>The updated <c>Basket</c> details</returns>
-        Task<Basket> AddItemToBasketAndCalculateCostAsync(int clientId, Basket basket, CancellationToken cancellationToken);
+        Task<Result<Basket>> AddItemToBasketAndCalculateCostAsync(int clientId, Basket basket, CancellationToken cancellationToken);
 
         /// <summary>
         /// Removes a stored client basket
@@ -29,7 +29,7 @@ namespace Checkout.Api.Interfaces
         /// <param name="clientId">The client identity of the basket to load</param>
         /// <param name="cancellationToken">System cancellation object</param>
         /// <returns>The stored client basket</returns>
-        Task<Basket> GetClientBasketAsync(int clientId, CancellationToken cancellationToken);
+        Task<Result<Basket>> GetClientBasketAsync(int clientId, CancellationToken cancellationToken);
 
         /// <summary>
         /// Removes an item from the basket and recalculates the cost
@@ -37,6 +37,6 @@ namespace Checkout.Api.Interfaces
         /// <param name="basket">The basket details to remove</param>
         /// <param name="cancellationToken">System cancellation object</param>
         /// <returns>The updated basket</returns>
-        Task<Basket> RemoveItemFromBasketAndCalculateCostAsync(Basket basket, CancellationToken cancellationToken);
+        Task<Result<Basket>> RemoveItemFromBasketAndCalculateCostAsync(Basket basket, CancellationToken cancellationToken);
     }
 }
